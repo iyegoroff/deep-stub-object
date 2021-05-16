@@ -26,8 +26,6 @@ jobs:
       - attach_workspace:
           at: .
       - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
-      - run: env
-      - run: cat ~/.npmrc
       - run: npm publish
 
 workflows:
@@ -39,6 +37,7 @@ workflows:
             tags:
               only: /.*/
       - publish:
+          context: iyegoroff
           requires:
             - build
           filters:
