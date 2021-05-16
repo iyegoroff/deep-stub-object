@@ -1,6 +1,6 @@
 {
   "name": "deep-stub-object",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Proxy-backed custom error message instead of `TypeError: x is undefined`",
   "main": "dist/umd/index.js",
   "module": "dist/index.js",
