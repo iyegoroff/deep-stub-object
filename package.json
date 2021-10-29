@@ -2,17 +2,27 @@
   "name": "deep-stub-object",
   "version": "0.0.7",
   "description": "Proxy-backed custom error message instead of `TypeError: x is undefined`",
-  "main": "dist/umd/index.js",
-  "module": "dist/index.js",
-  "browser": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "sideEffects": false,
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/dts/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/cjs/index.js",
+      "import": "./dist/esm/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "engines": {
+    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+  },
   "scripts": {
     "preversion": "npm run lint -- --fix && npm run build && npm t",
     "postversion": "git add . && git commit -am lint || : && git push && git push --tags",
-    "build:dts": "tsc -p tsconfig.build.json -d true --emitDeclarationOnly true --removeComments false",
-    "build:umd": "tsc -p tsconfig.build.json -m umd -t es5 --lib es5,es2015.proxy --outDir ./dist/umd",
-    "build:es6": "tsc -p tsconfig.build.json",
-    "build": "rm -rf dist && mkdir dist && npm run build:dts && npm run build:umd && npm run build:es6",
+    "build:dts": "tsc -p configs/tsconfig.dts.json",
+    "build:esm": "tsc -p configs/tsconfig.esm.json",
+    "build:cjs": "tsc -p configs/tsconfig.cjs.json",
+    "build": "rm -rf dist && mkdir dist && npm run build:dts && npm run build:esm && npm run build:cjs",
     "lint": "eslint .",
     "test": "jest",
     "coverage": "codecov"
@@ -37,28 +47,25 @@
   "author": "iyegoroff <iegoroff@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "@types/jest": "^26.0.23",
-    "@typescript-eslint/eslint-plugin": "^4.23.0",
-    "@typescript-eslint/parser": "^4.23.0",
-    "codecov": "^3.8.2",
-    "eslint": "^7.26.0",
+    "@types/jest": "^27.0.2",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "codecov": "^3.8.3",
+    "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-config-standard-with-typescript": "^20.0.0",
-    "eslint-plugin-import": "^2.23.2",
+    "eslint-config-standard-with-typescript": "^21.0.1",
+    "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-no-null": "^1.0.2",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-promise": "^4.3.1",
-    "jest": "^26.6.3",
-    "prettier": "^2.3.0",
-    "ts-jest": "^26.5.6",
-    "typescript": "^4.2.4"
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^5.1.1",
+    "jest": "^27.3.1",
+    "prettier": "^2.4.1",
+    "ts-jest": "^27.0.7",
+    "typescript": "^4.4.4"
   },
   "jest": {
-    "moduleFileExtensions": [
-      "js",
-      "ts"
-    ],
+    "moduleFileExtensions": ["js", "ts"],
     "testRegex": ".spec.ts$",
     "transform": {
       "^.+\\.ts$": "ts-jest"
