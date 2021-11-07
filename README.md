@@ -4,7 +4,7 @@
 [![CircleCI](https://circleci.com/gh/iyegoroff/deep-stub-object.svg?style=svg)](https://circleci.com/gh/iyegoroff/deep-stub-object)
 [![codecov](https://codecov.io/gh/iyegoroff/deep-stub-object/branch/main/graph/badge.svg?t=1520230083925)](https://codecov.io/gh/iyegoroff/deep-stub-object)
 ![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/npm/deep-stub-object)
-[![Bundlephobia](https://badgen.net/bundlephobia/minzip/deep-stub-object?label=min+gzip)](https://bundlephobia.com/package/deep-stub-object@3)
+[![Bundlephobia](https://badgen.net/bundlephobia/minzip/deep-stub-object?label=min+gzip)](https://bundlephobia.com/package/deep-stub-object)
 [![npm](https://img.shields.io/npm/l/deep-stub-object.svg?t=1495378566925)](https://www.npmjs.com/package/deep-stub-object)
 
 Proxy-backed custom error message instead of `TypeError: x is undefined`
