@@ -1,6 +1,6 @@
 {
   "name": "deep-stub-object",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Proxy-backed custom error message instead of `TypeError: x is undefined`",
   "sideEffects": false,
   "main": "./dist/cjs/index.js",
