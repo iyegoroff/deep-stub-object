@@ -1,11 +1,15 @@
 # deep-stub-object
 
 [![npm](https://img.shields.io/npm/v/deep-stub-object)](https://npm.im/deep-stub-object)
-[![CircleCI](https://circleci.com/gh/iyegoroff/deep-stub-object.svg?style=svg)](https://circleci.com/gh/iyegoroff/deep-stub-object)
-[![codecov](https://codecov.io/gh/iyegoroff/deep-stub-object/branch/main/graph/badge.svg?t=1520230083925)](https://codecov.io/gh/iyegoroff/deep-stub-object)
+[![build](https://github.com/iyegoroff/deep-stub-object/workflows/build/badge.svg)](https://github.com/iyegoroff/deep-stub-object/actions/workflows/build.yml)
+[![publish](https://github.com/iyegoroff/deep-stub-object/workflows/publish/badge.svg)](https://github.com/iyegoroff/deep-stub-object/actions/workflows/publish.yml)
+[![codecov](https://codecov.io/gh/iyegoroff/deep-stub-object/branch/main/graph/badge.svg?token=YC314L3ZF7)](https://codecov.io/gh/iyegoroff/deep-stub-object)
+[![Type Coverage](https://img.shields.io/badge/dynamic/json.svg?label=type-coverage&prefix=%E2%89%A5&suffix=%&query=$.typeCoverage.atLeast&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fiyegoroff%2Fts-railway%2Fmain%2Fpackage.json)](https://github.com/plantain-00/type-coverage)
 ![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/npm/deep-stub-object)
-[![Bundlephobia](https://badgen.net/bundlephobia/minzip/deep-stub-object?label=min+gzip)](https://bundlephobia.com/package/deep-stub-object)
-[![npm](https://img.shields.io/npm/l/deep-stub-object.svg?t=1495378566925)](https://www.npmjs.com/package/deep-stub-object)
+[![Bundlephobia](https://img.shields.io/bundlephobia/minzip/deep-stub-object?label=min+gzip)](https://bundlephobia.com/package/deep-stub-object)
+[![npm](https://img.shields.io/npm/l/deep-stub-object.svg?t=1495378566926)](https://www.npmjs.com/package/deep-stub-object)
+
+<!-- [![Bundlephobia](https://badgen.net/bundlephobia/minzip/deep-stub-object?label=min+gzip)](https://bundlephobia.com/package/deep-stub-object) -->
 
 Proxy-backed custom error message instead of `TypeError: x is undefined`
 
