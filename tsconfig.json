@@ -12,7 +12,8 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "allowUnreachableCode": false,
-    "removeComments": true,
+    "outDir": "tmp",
+    "declaration": true,
     "noUncheckedIndexedAccess": true,
     "types": ["jest"]
   }
