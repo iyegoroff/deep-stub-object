@@ -1,4 +1,3 @@
-import 'ts-jest'
 import { deepStub, DeepPartial } from '../src'
 
 type Obj = {

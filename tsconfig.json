@@ -4,7 +4,7 @@
     "target": "es2018",
     "strict": true,
     "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
+    "removeComments": true,
     "esModuleInterop": true,
     "noEmitOnError": true,
     "noImplicitReturns": true,
@@ -12,8 +12,6 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "allowUnreachableCode": false,
-    "outDir": "tmp",
-    "declaration": true,
     "noUncheckedIndexedAccess": true,
     "types": ["jest"]
   }
